@@ -38,7 +38,7 @@ async function GetLatestAWSComplianceReportDetails(action, settings) {
 ///// Helpers
 
 async function getToken(host, keyId, secret) {
-    const url = `https://${host}.lacework.net/api/v1/access/tokens`;
+    const url = `https://${host}.lacework.net/api/v2/access/tokens`;
     const fetchParams = {
         method: 'post',
         body: JSON.stringify({
@@ -52,7 +52,7 @@ async function getToken(host, keyId, secret) {
     }
     const body = await fetchJson(url, fetchParams);
 
-    return body.data[0].token;
+    return body.token;
 }
 
 async function fetchJson(url, fetchParams){
