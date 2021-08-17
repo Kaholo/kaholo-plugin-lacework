@@ -4,7 +4,7 @@
   "exposeRoute": false,
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description":"Kaholo wrapper for Lacework",
   "imgUrl": "lacework.png",
   "settings":[
@@ -83,6 +83,101 @@
               "name": "AWS PCI DSS Report"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "GetLatestGCPComplianceReportDetails",
+      "viewName": "GetLatestGCPComplianceReportDetails",
+      "params": [
+        {
+          "name":"GCP_ORG_ID",
+          "viewName":"GCP ORG ID",
+          "type":"string"
+        },
+        {
+          "name":"GCP_PROJ_ID",
+          "viewName":"GCP PROJECT ID",
+          "type":"string"
+        },
+        {
+          "name":"REPORT_TYPE",
+          "viewName":"Report Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "GCP_CIS",
+              "name": "GCP CIS Benchmark"
+            },
+            {
+              "id": "GCP_HIPAA",
+              "name": "GCP HIPAA Report"
+            },
+            {
+              "id": "GCP_SOC",
+              "name": "GCP SOC2 Report"
+            },
+            {
+              "id": "GCP_PCI",
+              "name": "GCP PCI Benchmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GetLatestAzureComplianceReportDetails",
+      "viewName": "GetLatestAzureComplianceReportDetails",
+      "params": [
+        {
+          "name":"AZURE_TENANT_ID",
+          "viewName":"AZURE TENANT ID",
+          "type":"string"
+        },
+        {
+          "name":"AZURE_SUBSCRIPTION_ID",
+          "viewName":"AZURE SUBSCRIPTION ID",
+          "type":"string"
+        },
+        {
+          "name":"REPORT_TYPE",
+          "viewName":"Report Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "AZURE_CIS",
+              "name": "Azure CIS Benchmark"
+            },
+            {
+              "id": "AZURE_SOC",
+              "name": "Azure SOC2 Report"
+            },
+            {
+              "id": "AZURE_PCI",
+              "name": "Azure PCI Benchmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ConfigureSuppressionviaTagforAWS",
+      "viewName": "ConfigureSuppressionviaTagforAWS",
+      "params": [
+        {
+          "name":"REC_ID",
+          "viewName":"REC ID",
+          "type":"string"
+        },
+        {
+          "name":"TAG_KEY",
+          "viewName":"TAG KEY",
+          "type":"string"
+        },
+        {
+          "name":"TAG_VALUE",
+          "viewName":"TAG VALUE",
+          "type":"string"
         }
       ]
     }
