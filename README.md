@@ -13,7 +13,7 @@ This method returns all the data about the lacework event specified.
 ### Parameters:
 1. Event ID(required) - The event ID of the requested event. If using the lacework webhook, you can get it from the event_id field.
 
-## Method: GetLatestAWSComplianceReportDetails
+## Method: Get Latest AWS Compliance Report Details
 This method returns the latest AWS Compliance Report about the AWS account ID and report type specified.
 
 ### Parameters:
@@ -25,4 +25,43 @@ This method returns the latest AWS Compliance Report about the AWS account ID an
 - AWS NIST 800-53 Report
 - AWS HIPAA Report
 - AWS SOC 2 Report
+- AWS SOC 2 Report Revision 2
 - AWS PCI DSS Report
+
+## Method: Get Latest Azure Compliance Report Details
+This method returns the latest Azure Compliance Report about the Azure subscription ID and report type specified.
+
+### Parameters:
+1. AZURE TENANT ID(required) - Specify the Azure tenant id for the report to run.
+2. AZURE SUBSCRIPTION ID(required) - Specify the Azure Subscription id for the the retor to run.
+3. Report Type(required) - Specify the Report Type you want to get. You can use the following examples:
+- Azure CIS Benchmark
+- Azure SOC2 Report
+- Azure PCI Benchmark
+
+## Method: Get Latest GCP Compliance Report Details
+This method returns the latest GCP Compliance Report about the GCP project ID and report type specified.
+
+### Parameters:
+1. GCP ORG ID(required) - Specify the GCP Organizational ID.
+2. GCP PROJECT ID(required) - Specify the GCP Project ID.
+3. Report Type(required) - Specify the Report Type you want to get. You can use the following examples:
+- GCP CIS Benchmark
+- GCP HIPAA Report
+- GCP SOC2 Report
+- GCP PCI Benchmark
+
+## Method: Get AWS Suppression for a recommendationID
+This method returns the current suppression configuration for a specific recommendationID.
+
+### Parameters:
+1. REC ID (required) - Specify the REC_ID that you would like to get the current suppression configuration.
+
+## Method: Configure Suppression via Tag for AWS
+This method configures a suprression for a specific recommendationID.
+
+### Parameters:
+1. REC ID (required) - Specify the REC_ID that you would like to get the current suppression configuration.
+2. TAG KEY (required) - Specify the TAG_KEY that will be used for the suppression configuration.
+3. TAG VALUE (required) - Specify the TAG_VALUE that will be used for the suppression configuration.
+4. SUPPRESSION COMMENT (required) - Specify the comment that will be set for the suppression configuration.
