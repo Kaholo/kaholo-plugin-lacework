@@ -113,11 +113,6 @@ async function ConfigureSuppressionviaTagforAWS(action, settings) {
   }
 
   return await fetchJson(url, fetchParams);
-
-
-  //const url = `https://${host}.lacework.net/api/v1/external/suppressions/aws`;
-  //const fetchParams = { method: 'post', headers: { 'Authorization': `Bearer ${token}` }, body: { 'recommendationExceptions': { 'LW_S3_1': [ { 'accountIds': [ 'ALL_ACCOUNTS' ], 'regionNames': [ 'ALL_REGIONS' ], 'resourceNames': [], 'resourceTags': [ { 'key': 'LW_S3_1', 'value': 'suppressed' } ], 'comments': 'test' } ] } }  };
-  //return await fetchJson(url, fetchParams);
 }
 
 ///// Helpers
