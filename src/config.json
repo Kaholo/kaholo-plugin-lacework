@@ -38,7 +38,7 @@
     },
     {
       "name": "GetLatestAWSComplianceReportDetails",
-      "viewName": "GetLatestAWSComplianceReportDetails",
+      "viewName": "Get Latest AWS Compliance Report Details",
       "params": [
         {
           "name":"AWS_ACCOUNT_ID",
@@ -88,7 +88,7 @@
     },
     {
       "name": "GetLatestGCPComplianceReportDetails",
-      "viewName": "GetLatestGCPComplianceReportDetails",
+      "viewName": "Get Latest GCP Compliance Report Details",
       "params": [
         {
           "name":"GCP_ORG_ID",
@@ -127,7 +127,7 @@
     },
     {
       "name": "GetLatestAzureComplianceReportDetails",
-      "viewName": "GetLatestAzureComplianceReportDetails",
+      "viewName": "Get Latest Azure Compliance Report Details",
       "params": [
         {
           "name":"AZURE_TENANT_ID",
@@ -161,8 +161,19 @@
       ]
     },
     {
+      "name": "GetAWSSuppressionforarecommendationID",
+      "viewName": "Get AWS Suppression for a recommendationID",
+      "params": [
+        {
+          "name":"REC_ID",
+          "viewName":"REC ID",
+          "type":"string"
+        }
+      ]
+    },
+    {
       "name": "ConfigureSuppressionviaTagforAWS",
-      "viewName": "ConfigureSuppressionviaTagforAWS",
+      "viewName": "Configure Suppression via Tag for AWS",
       "params": [
         {
           "name":"REC_ID",
@@ -177,6 +188,11 @@
         {
           "name":"TAG_VALUE",
           "viewName":"TAG VALUE",
+          "type":"string"
+        },
+        {
+          "name":"SUPPRESSION_COMMENT",
+          "viewName":"SUPPRESION COMMENT",
           "type":"string"
         }
       ]
