@@ -13,7 +13,7 @@ This method returns all the data about the lacework event specified.
 ### Parameters:
 1. Event ID(required) - The event ID of the requested event. If using the lacework webhook, you can get it from the event_id field.
 
-## Method: GetLatestAWSComplianceReportDetails
+## Method: Get Latest AWS Compliance Report Details
 This method returns the latest AWS Compliance Report about the AWS account ID and report type specified.
 
 ### Parameters:
@@ -28,7 +28,7 @@ This method returns the latest AWS Compliance Report about the AWS account ID an
 - AWS SOC 2 Report Revision 2
 - AWS PCI DSS Report
 
-## Method: GetLatestAzureComplianceReportDetails
+## Method: Get Latest Azure Compliance Report Details
 This method returns the latest Azure Compliance Report about the Azure subscription ID and report type specified.
 
 ### Parameters:
@@ -39,7 +39,7 @@ This method returns the latest Azure Compliance Report about the Azure subscript
 - Azure SOC2 Report
 - Azure PCI Benchmark
 
-## Method: GetLatestGCPComplianceReportDetails
+## Method: Get Latest GCP Compliance Report Details
 This method returns the latest GCP Compliance Report about the GCP project ID and report type specified.
 
 ### Parameters:
@@ -50,3 +50,18 @@ This method returns the latest GCP Compliance Report about the GCP project ID an
 - GCP HIPAA Report
 - GCP SOC2 Report
 - GCP PCI Benchmark
+
+## Method: Get AWS Suppression for a recommendationID
+This method returns the current suppression configuration for a specific recommendationID.
+
+### Parameters:
+1. REC ID (required) - Specify the REC_ID that you would like to get the current suppression configuration.
+
+## Method: Configure Suppression via Tag for AWS
+This method configures a suprression for a specific recommendationID.
+
+### Parameters:
+1. REC ID (required) - Specify the REC_ID that you would like to get the current suppression configuration.
+2. TAG KEY (required) - Specify the TAG_KEY that will be used for the suppression configuration.
+3. TAG VALUE (required) - Specify the TAG_VALUE that will be used for the suppression configuration.
+4. SUPPRESSION COMMENT (required) - Specify the comment that will be set for the suppression configuration.
