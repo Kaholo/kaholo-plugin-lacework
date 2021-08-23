@@ -102,7 +102,7 @@ async function ConfigureSuppressionviaTagforAWS(action, settings) {
   }
   const token = await getToken(host, keyId, secret);
   const url = `https://${host}.lacework.net/api/v1/external/suppressions/aws`;
-  const jsonstring = `{ "recommendationExceptions": { "${tagkey}": [ { "accountIds": [ "ALL_ACCOUNTS"], "regionNames": [ "ALL_ACCOUNTS"], "resourceNames": [], "resourceTags": [ { "key": "${tagkey}", "value":"${tagvalue}" } ], "comments": "${suppressioncomment}" } ] } }`;
+  const jsonstring = `{ "recommendationExceptions": { "${rec_id}": [ { "accountIds": [ "ALL_ACCOUNTS"], "regionNames": [ "ALL_ACCOUNTS"], "resourceNames": [], "resourceTags": [ { "key": "${tagkey}", "value":"${tagvalue}" } ], "comments": "${suppressioncomment}" } ] } }`;
   const fetchParams = {
       method: 'post',
       body: jsonstring,
