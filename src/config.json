@@ -4,9 +4,13 @@
   "exposeRoute": false,
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description":"Kaholo wrapper for Lacework",
   "imgUrl": "lacework.png",
+  "category": [
+    "MONITORING",
+    "SECURITY"
+  ],
   "settings":[
     {
       "name":"SECRET",
