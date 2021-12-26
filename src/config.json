@@ -13,9 +13,9 @@
   ],
   "settings":[
     {
-      "name":"SECRET",
+      "name": "SECRET",
       "viewName": "Secret",
-      "type":"vault"
+      "type": "vault"
     },
     {
       "name": "HOST",
@@ -34,9 +34,9 @@
       "viewName": "Get event details",
       "params": [
         {
-          "name":"EVENT_ID",
-          "viewName":"Event ID",
-          "type":"string"
+          "name": "EVENT_ID",
+          "viewName": "Event ID",
+          "type": "string"
         }
       ]
     },
@@ -45,13 +45,13 @@
       "viewName": "Get Latest AWS Compliance Report Details",
       "params": [
         {
-          "name":"AWS_ACCOUNT_ID",
-          "viewName":"AWS ACCOUNT ID",
-          "type":"string"
+          "name": "AWS_ACCOUNT_ID",
+          "viewName": "AWS ACCOUNT ID",
+          "type": "string"
         },
         {
-          "name":"REPORT_TYPE",
-          "viewName":"Report Type",
+          "name": "REPORT_TYPE",
+          "viewName": "Report Type",
           "type": "options",
           "options": [
             {
